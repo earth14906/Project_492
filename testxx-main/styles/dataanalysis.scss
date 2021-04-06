@@ -1,0 +1,22 @@
+.graph-extend {
+  border-radius: 5px;
+  background: var(--geist-background);
+  box-shadow: var(--shadow-small);
+  transition: box-shadow 0.2s ease;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  h2 {
+    padding: 1rem;
+  }
+  .graph-container {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid black;
+
+    div p {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 1rem 0 1rem;
+    }
+  }
+}

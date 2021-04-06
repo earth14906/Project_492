@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --geist-success-lighter: #d3e5ff;
+  --geist-success-light: #3291ff;
+  --geist-success: #0070f3;
+  --geist-success-dark: #0761d1;
+  --geist-error-lighter: #f7d4d6;
+  --geist-error-light: #ff1a1a;
+  --geist-error: #e00;
+  --geist-error-dark: #c50000;
+  --geist-warning-lighter: #ffefcf;
+  --geist-warning-light: #f7b955;
+  --geist-warning: #f5a623;
+  --geist-warning-dark: #ab570a;
+  --geist-violet-lighter: #e3d7fc;
+  --geist-violet-light: #8a63d2;
+  --geist-violet: #7928ca;
+  --geist-violet-dark: #4c2889;
+  --geist-cyan-lighter: #aaffec;
+  --geist-cyan-light: #79ffe1;
+  --geist-cyan: #50e3c2;
+  --geist-cyan-dark: #29bc9b;
+  --geist-highlight-purple: #f81ce5;
+  --geist-highlight-magenta: #eb367f;
+  --geist-highlight-pink: #ff0080;
+  --geist-highlight-yellow: #fff500;
+  --geist-foreground: #000;
+  --geist-background: #fff;
+  --geist-selection: var(--geist-cyan-light);
+  --accents-1: #fafafa;
+  --accents-2: #eaeaea;
+  --accents-3: #999;
+  --accents-4: #888;
+  --accents-5: #666;
+  --accents-6: #444;
+  --accents-7: #333;
+  --accents-8: #111;
+  --geist-link-color: var(--geist-success);
+  --geist-marketing-gray: #fafbfc;
+  --geist-code: var(--geist-highlight-purple);
+  --geist-secondary-lighter: var(--accents-2);
+  --geist-secondary-light: var(--accents-3);
+  --geist-secondary: var(--accents-5);
+  --geist-secondary-dark: var(--accents-7);
+  --dropdown-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.02);
+  --dropdown-triangle-stroke: #fff;
+  --scroller-start: #fff;
+  --scroller-end: hsla(0, 0%, 100%, 0);
+  --shadow-smallest: 0px 4px 8px rgba(0, 0, 0, 0.12);
+  --shadow-small: 0 5px 10px rgba(0, 0, 0, 0.12);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 30px 60px rgba(0, 0, 0, 0.12);
+  --shadow-sticky: 0 12px 10px -10px rgba(0, 0, 0, 0.12);
+  --portal-opacity: 0.25;
+  --wv-green: #0cce6b;
+  --wv-orange: #ffa400;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  background: none;
+  border: 1px solid sandybrown;
+  padding: 0.5rem 0.8rem;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    border-bottom: 0.25px solid gray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    div {
+      img {
+        height: 3rem;
+        border-radius: 50%;
+      }
+      span {
+        margin: 0 0.5rem;
+      }
+      display: flex;
+      align-items: center;
+    }
+    a {
+      padding: 0;
+      img {
+        height: 75px;
+      }
+    }
+  }
+  .section {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    .side-nav {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      div {
+        padding: 0.5rem 0;
+      }
+    }
+    .content-container {
+      flex: 1;
+    }
+  }
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  :nth-child(even) {
+    div {
+      background: rgb(243, 243, 243);
+      color: rgb(1, 152, 122);
+      a {
+        color: rgb(1, 152, 122);
+      }
+    }
+  }
+
+  &:last-child {
+    border-bottom: 2px solid rgb(1, 152, 122);
+  }
+
+  .head {
+    border-radius: 0.5rem 0.5rem 0 0;
+    background: rgb(1, 152, 122);
+    div {
+      color: white;
+    }
+  }
+  .row {
+    height: 3rem;
+    // background: hotpink;
+    width: 100%;
+    display: flex;
+    div {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.float-content {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(195, 195, 195, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    padding: 1rem 2rem;
+    background-color: white;
+    width: 600px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 3rem;
+    }
+    .row {
+      flex-direction: column;
+    }
+    .btn-group {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .MuiSvgIcon-root {
+      font-size: 1rem;
+      padding: 0 2rem;
+    }
+  }
+}
+
+$measurement: 0.125em;
+
+button {
+  background: white;
+  border: $measurement solid black;
+  cursor: pointer;
+  letter-spacing: $measurement;
+  padding: 0.5em 0.75em;
+  position: relative;
+  text-transform: uppercase;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    transition: all 0.125s ease-in-out;
+  }
+  &.cut {
+    background: none;
+    border-color: transparent;
+    &:before,
+    &:after {
+      transition: all 0.175s ease-in-out;
+    }
+    &:before {
+      background: black;
+      border: 0px dashed black;
+      left: $measurement * -1;
+      top: $measurement * -1;
+      right: $measurement * -1;
+      bottom: $measurement * -1;
+      z-index: -1;
+    }
+    &:hover:before,
+    &:focus:before {
+      background: white;
+      border-width: $measurement;
+    }
+    &:after {
+      background: white;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  &.copy {
+    &:after {
+      border: $measurement dashed black;
+      bottom: $measurement * -1;
+      left: $measurement * -1;
+      right: $measurement * -1;
+      top: $measurement * -1;
+      z-index: -1;
+    }
+    &:hover:after,
+    &:focus:after {
+      bottom: $measurement * -3;
+      left: $measurement;
+      right: $measurement * -3;
+      top: $measurement;
+    }
+  }
+  &.paste {
+    &:after {
+      border: $measurement dashed black;
+      bottom: $measurement * -1;
+      left: $measurement * -1;
+      right: $measurement * -1;
+      top: $measurement * -1;
+    }
+    &:hover:after,
+    &:focus:after {
+      bottom: $measurement;
+      left: $measurement;
+      right: $measurement;
+      top: $measurement;
+    }
+  }
+}
+
+@import "./home.scss";
+@import "./information.scss";
+@import "./login.scss";
+@import "./dataanalysis.scss";
+@import "~react-vis/dist/style";
